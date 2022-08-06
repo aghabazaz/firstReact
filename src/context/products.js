@@ -7,11 +7,8 @@ const Context = createContext({
   onDecrement: () => {},
 });
 
+export default Context;
 
-export default Context
-
-export const ProductContextProvider = ({children, ...props}) => {
-return (
-    <Context.Provider value={props}>{children}</Context.Provider>
-)
+export const ProductContextProvider = ({ children, ...props }) => {
+  return <Context.Provider value={props}>{children}</Context.Provider>;
 };
