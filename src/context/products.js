@@ -1,9 +1,17 @@
 import { createContext } from "react";
-const productContext = createContext({
-    products:[],
-    onDelete:()=>{},
-    onReset: ()=>{},
-    onIncrement: ()=>{},
-    onDecrement: ()=>{}
-})
-export default productContext;
+const Context = createContext({
+  products: [],
+  onDelete: () => {},
+  onReset: () => {},
+  onIncrement: () => {},
+  onDecrement: () => {},
+});
+
+
+export default Context
+
+export const ProductContextProvider = ({children, ...props}) => {
+return (
+    <Context.Provider value={props}>{children}</Context.Provider>
+)
+};
