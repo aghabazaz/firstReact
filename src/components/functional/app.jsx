@@ -1,7 +1,9 @@
 import Navbar from "../navbar";
 import Products from "./products";
 import { useState } from "react";
-import ProductContext from "../../context/products";
+//import {ProductContextProvider} from "../../context/products";
+import { ProductContextProvider } from "../../context/products";
+
 const App = () => {
   const [products, setProducts] = useState([
     { id: 1, productName: "laptop", count: 1 },
@@ -36,7 +38,7 @@ const App = () => {
 
   return (
     <>
-      <ProductContext.Provider
+      <ProductContextProvider
         products={products}
         onDelete={handleDelete}
         onIncrement={handleIncrement}
@@ -45,7 +47,7 @@ const App = () => {
       >
         <Navbar></Navbar>
         <Products></Products>
-      </ProductContext.Provider>
+      </ProductContextProvider>
     </>
   );
 };
