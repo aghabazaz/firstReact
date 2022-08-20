@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import Product from "./product";
-import {ProductContextProvider} from "../../context/products";
+import context from "../../context/products";
 const Products = (props) => {
-  const productContext = useContext(ProductContextProvider);
+  const productContext = useContext(context);
   return (
     <>
       <button className="btn btn-primary" onClick={productContext.onReset}>

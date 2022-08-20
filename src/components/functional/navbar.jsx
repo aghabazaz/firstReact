@@ -1,7 +1,8 @@
-import {ProductContextProvider} from "../../context/products";
+import context from "../../context/products";
+import { useContext } from "react";
 
 const Navbar = (props) => {
-  const productContext = useContext(ProductContextProvider);
+  const productContext = useContext(context);
 
   return (
     <nav className="navbar navbar-light bg-light">

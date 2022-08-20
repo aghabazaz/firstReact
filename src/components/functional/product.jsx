@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import {ProductContextProvider} from "../../context/products";
+import context from "../../context/products";
 //const  Product= (props) => {
 const Product = ({ productName, count: countPro, children, id }) => {
   //const [count,setCount] = useState(countPro);
-  const productsContext = useContext(ProductContextProvider);
+  const productsContext = useContext(context);
   return (
     <>
       <span className="m-2 text-info">{productName}</span>
